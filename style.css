@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box; 
+    background-color:#efeaf0; 
+    font-family: 'Roboto', sans-serif;}
+body {
+    padding:0;
+    margin:0; 
+}
+
+
+
+#header{
+    display:flex;
+    align-items: center; 
+	justify-content:space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#galeria {
+    display:flex;
+    flex-wrap: wrap;
+    margin:10px;
+    height:100%;
+    justify-content: space-evenly;
+    background-color: #efeaf0;}
+.item-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+    max-height: 40vh;
+    align-items: center;
+}
+.card-p{
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
+.card-p2 {
+    margin-bottom: 1%;
+}
+.fotos-galeria {
+    width:75%;
+    height:75%;
+    object-fit:cover;
+    box-shadow: 2px 4px 10px 0 #000;
+    transition: width 1s;
+}
+.fotos-galeria:hover {
+    width: 100%;
+    transition: width 1s;
+}
+.container{
+    position: sticky;
+    top:0px;
+}
+
+#nav-bar {
+    display:flex;
+    flex-basis:100%;
+    min-height: 5vh;
+    background-color:#5d2b66;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: 2px 4px 10px 0 #000;}
+nav {
+    background-color:#5d2b66;
+}
+a {
+    margin:10px;
+    background-color:transparent;
+    font-family:helvetica;
+    font-size: 100%;
+    text-transform: uppercase;
+    text-decoration:none;
+    color: #DDC3E8;
+    font-weight: 600;}
+#footer {
+    color: aliceblue;
+    display:flex;
+    flex-direction: column;
+    height:100px;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+#footer > p {
+    background-color: #000;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:	 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+#nombre{
+    height:38px;
+    width: 70%;
+    margin-top: 5%;
+    box-shadow: 2px 4px 10px 0 #000;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+#mail{
+    height:35px;
+    width: 70%;
+    box-shadow: 2px 4px 10px 0 #000;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+#msj{
+    height:100px;
+    width: 70%;
+    box-shadow: 2px 4px 10px 0 #000;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+#enviar {
+    margin: 10px;
+    width: 25%;
+    height:30px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px 0 #000;
+}
+.link{
+    color: black
+}
+.foto-logo{
+    border-radius: 50%;
+    max-width: 30%;
+    max-height: 15vh;
+}
+h1{
+    color:#5d2b66;
+    font-size: 1.5em;
+}
+.caja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+#contacto {
+    box-shadow: 2px 4px 10px 0 #000;
+    width: 50vw;
+}
+.parrafo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+}
+.parrafo > p,h2 {
+    max-width: 50vw;
+}
+.iframe-container {
+    display: flex;
+    justify-content: center;
+}
+.iframe {
+    width: 50vw;
+    height: 40vh;
+    margin: 2%;
+    box-shadow: 2px 4px 10px 0 #000;
+}
+
+@media screen and (max-width: 450px) {
+    #galeria{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .item-wrapper{
+        min-width: 85vw;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .parrafo > p,h2{
+        min-width: 85vw;
+    }
+    .iframe {
+        min-width: 85vw;
+    }
+    #contacto {
+        min-width: 85vw;
+    }
+    .fotos-galeria {
+        width:70%;
+        height:70%;
+        object-fit: cover;
+        transition: whidth 1s;
+        }
+    .fotos-galeria:hover {
+        width:80%;
+        height: 70%;
+        transition: whidth 1s;
+    }
+    .iframe-container {
+        margin-bottom: 2vh;
+    }
+}
+
+@media screen and (max-width: 310px){
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 100%
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #galeria {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .item-wrapper{
+        justify-content: center;
+        max-width: 30vw;
+    }
+}
