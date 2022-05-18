@@ -1,12 +1,11 @@
 *{
     box-sizing: border-box; 
     background-color:#efeaf0; 
-    font-family: 'Roboto', sans-serif;}
+    font-family: 'quicksand', 'Koulen', sans-serif;}
 body {
     padding:0;
     margin:0; 
 }
-
 
 
 #header{
@@ -61,7 +60,6 @@ body {
     background-color:#5d2b66;
     justify-content: center;
     align-items: center;
-    
     box-shadow: 2px 4px 10px 0 #000;}
 nav {
     background-color:#5d2b66;
@@ -103,6 +101,10 @@ form{
     box-shadow: 2px 4px 10px 0 #000;
     border-radius: 10px;
     background-color: aliceblue;
+    border-color: transparent;
+}
+#nombre:focus {
+    border:3px solid rgb(0, 55, 255);
 }
 #mail{
     height:35px;
@@ -110,6 +112,7 @@ form{
     box-shadow: 2px 4px 10px 0 #000;
     border-radius: 10px;
     background-color: aliceblue;
+    border-color: transparent;
 }
 #msj{
     height:100px;
@@ -117,6 +120,7 @@ form{
     box-shadow: 2px 4px 10px 0 #000;
     background-color: aliceblue;
     border-radius: 10px;
+    border-color: transparent;
 }
 #enviar {
     margin: 10px;
@@ -124,18 +128,27 @@ form{
     height:30px;
     border-radius: 10px;
     box-shadow: 2px 4px 10px 0 #000;
+    border-color: transparent;
+    cursor: pointer;
 }
 .link{
     color: black
 }
+#foto-logo {
+    max-width: 5vw;
+    max-height: 25vh;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
+}
 .foto-logo{
     border-radius: 50%;
-    max-width: 30%;
-    max-height: 15vh;
+    max-width: 7vw;
+    display: inline-block;
 }
 h1{
     color:#5d2b66;
-    font-size: 1.5em;
+    font-size: 2.5em;
+    font-family: 'Koulen';
 }
 .caja {
     display: flex;
@@ -147,27 +160,74 @@ h1{
     box-shadow: 2px 4px 10px 0 #000;
     width: 50vw;
 }
-.parrafo {
+.titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2vh;
 }
-.parrafo > p,h2 {
-    max-width: 50vw;
+.parrafo {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    max-width: 80%;
+}
+.parrafo > img {
+    grid-area: img;
+    max-height: 45vh;
+    max-width: 35vw;
+    object-fit: cover;
+}
+.texto-parrafo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2vw;
+    max-width: 40vw;
+}
+.parrafo1 {
+    margin-top: 0;
+}
+.parrafo3 {
+    margin-bottom: 0;
 }
 .iframe-container {
     display: flex;
     justify-content: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 .iframe {
     width: 50vw;
     height: 40vh;
     margin: 2%;
+    overflow: hidden;
     box-shadow: 2px 4px 10px 0 #000;
 }
-
+.fa-brands {
+    color:#5d2b66;
+}
+h2 {
+    padding-top: 3vh;
+}
 @media screen and (max-width: 450px) {
+    #header {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .iframe-container {
+        overflow: hidden;
+    }
+    #foto-logo {
+        display:none;
+    }
+    .link {
+        display: none;
+    }
     #galeria{
         flex-wrap: wrap;
         flex-direction: column;
@@ -177,9 +237,6 @@ h1{
         min-width: 85vw;
         margin-top: 4vh;
         margin-bottom: 4vh;
-    }
-    .parrafo > p,h2{
-        min-width: 85vw;
     }
     .iframe {
         min-width: 85vw;
@@ -201,6 +258,23 @@ h1{
     .iframe-container {
         margin-bottom: 2vh;
     }
+    .parrafo{
+        flex-direction: column;
+        font-size: medium;
+        min-width: 90vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .texto-parrafo{
+        padding-top: 2vh;
+        min-width: 80vw;
+    }
+    .parrafo > img {
+        min-width: 60vw;
+    }
+    .titulo {
+        min-width: 90vw;
+    }
 }
 
 @media screen and (max-width: 310px){
@@ -209,7 +283,7 @@ h1{
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-        flex-basis: 100%
+        flex-basis: 100%;
     }
 }
 
